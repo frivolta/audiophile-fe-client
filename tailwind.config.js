@@ -54,6 +54,12 @@ module.exports = {
             lineHeight: "1.5625rem",
           },
         ],
+        subtitle: [
+          "0.8125rem",
+          {
+            letterSpacing: "0.06rem",
+          },
+        ],
         button: [
           "0.8125rem",
           {
