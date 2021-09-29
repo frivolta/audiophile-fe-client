@@ -1,0 +1,57 @@
+import IconClose from "../../assets/shared/tablet/icon-close.svg";
+
+import React, { Dispatch, SetStateAction } from "react";
+import { PATHS } from "../../config/routes";
+import {
+  MenuNavigationListContainerDesktop,
+  MenuNavigationListItemDesktop,
+  MenuNavigationListItemMobile,
+  MenuNavigationListLink,
+  MobileMenuCloseContainer,
+  MobileMenuContainer,
+  MobileMenuNavigationList,
+} from "./styles";
+import { MobileMenuContext } from "../Header";
+
+export const DesktopMenu = () => {
+  return (
+    <MenuNavigationListContainerDesktop>
+      {PATHS.map((link) => (
+        <MenuNavigationListItemDesktop>
+          <MenuNavigationListLink href={link.path} aria-label={link.label}>
+            {link.label}
+          </MenuNavigationListLink>
+        </MenuNavigationListItemDesktop>
+      ))}
+    </MenuNavigationListContainerDesktop>
+  );
+};
+
+// Mobile Component
+
+export const MobileMenu: React.FC = () => {
+  const { isMobileOpen, triggerMobileMenu } = React.useContext(
+    MobileMenuContext
+  );
+
+  return (
+    <MobileMenuContainer $isHidden={!isMobileOpen}>
+      <MobileMenuCloseContainer onClick={triggerMobileMenu}>
+        <img src={IconClose} />
+      </MobileMenuCloseContainer>
+      <MobileMenuNavigationList>
+        {PATHS.map((link) => (
+          <MenuNavigationListItemMobile>
+            <MenuNavigationListLink
+              $isMobile
+              href={link.path}
+              aria-label={link.label}
+            >
+              {link.label}
+            </MenuNavigationListLink>
+          </MenuNavigationListItemMobile>
+        ))}
+      </MobileMenuNavigationList>
+    </MobileMenuContainer>
+  );
+};
