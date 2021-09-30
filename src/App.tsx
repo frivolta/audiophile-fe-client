@@ -14,6 +14,12 @@ import CatSpeakersImg from "./assets/shared/desktop/image-category-thumbnail-spe
 import CatEarphonesImg from "./assets/shared/desktop/image-category-thumbnail-earphones.png";
 import { CategoryItem } from "./components/CategoriesList";
 import { CategoriesWrapper } from "./components/CategoriesList/style";
+import {
+  PreviewSection,
+  PreviewSectionDivided,
+  PreviewSectionSmall,
+} from "./components/PreviewSection";
+import { ExcerptBestGear } from "./components/ExcerptBestGear";
 
 function App() {
   return (
@@ -51,6 +57,10 @@ function App() {
           marginAdjustment={4}
         />
       </CategoriesWrapper>
+      <PreviewSection />
+      <PreviewSectionSmall />
+      <PreviewSectionDivided />
+      <ExcerptBestGear />
     </React.Fragment>
   );
 }

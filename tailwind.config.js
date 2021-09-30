@@ -9,9 +9,15 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        // Hero
         "hero-image-desktop": "url('/src/assets/home/desktop/image-hero.jpg')",
         "hero-image-tablet": "url('/src/assets/home/mobile/image-header.jpg')",
         "hero-image-mobile": "url('/src/assets/home/tablet/image-header.jpg')",
+        // HomePage
+        previewSectionSmall:
+          "url('/src/assets/home/desktop/image-speaker-zx7.jpg')",
+        previewSectionDivided:
+          "url('/src/assets/home/desktop/image-earphones-yx1.jpg')",
       },
       width: {
         "1/7": "14.2857143%",
@@ -72,6 +78,33 @@ module.exports = {
           {
             letterSpacing: "0.08125rem",
             lineHeight: "1.5rem",
+          },
+        ],
+        h5: [
+          "1.75rem",
+          {
+            letterSpacing: "0.10625rem",
+            lineHeight: "2,0625rem",
+          },
+        ],
+        h4: [
+          "1.75rem",
+          {
+            letterSpacing: "0.125rem",
+            lineHeight: "2,375rem",
+          },
+        ],
+        h2: [
+          "2.5rem",
+          {
+            letterSpacing: "0.09375rem",
+            lineHeight: "2,75rem",
+          },
+        ],
+        p: [
+          "1,0666rem",
+          {
+            lineHeight: "1,5625rem",
           },
         ],
       },
