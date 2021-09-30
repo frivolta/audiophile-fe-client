@@ -13,7 +13,7 @@ import {
 } from "./styles";
 import { MobileMenuContext } from "../Header";
 
-export const DesktopMenu = () => {
+export const DesktopMenu: React.FC = () => {
   return (
     <MenuNavigationListContainerDesktop>
       {PATHS.map((link) => (
@@ -26,8 +26,6 @@ export const DesktopMenu = () => {
     </MenuNavigationListContainerDesktop>
   );
 };
-
-// Mobile Component
 
 export const MobileMenu: React.FC = () => {
   const { isMobileOpen, triggerMobileMenu } = React.useContext(

@@ -9,9 +9,9 @@ import {
   HeaderWrapper,
 } from "./styles";
 import LogoDesktop from "../../assets/shared/desktop/logo.svg";
-import IconCart from "../../assets/shared/desktop/icon-cart.svg";
 import IconHamburger from "../../assets/shared/tablet/icon-hamburger.svg";
 import { DesktopMenu, MobileMenu } from "../Menu";
+import { Cart } from "../Cart";
 
 // Mobile Context to open/close mobile menu
 interface MobileMenuState {
@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
   return (
     <MobileMenuContext.Provider value={{ isMobileOpen, triggerMobileMenu }}>
       <React.Fragment>
-        <HeaderWrapper>
+        <HeaderWrapper className="z-40">
           <HeaderGridContainer>
             <HeaderColLeft>
               <HamburgerWrapper onClick={triggerMobileMenu}>
@@ -57,7 +57,7 @@ export const Header: React.FC = () => {
               <DesktopMenu />
             </HeaderCenterColDesktop>
             <HeaderRightCol>
-              <img src={IconCart} alt="Cart" />
+              <Cart />
             </HeaderRightCol>
           </HeaderGridContainer>
           <MobileMenu />
