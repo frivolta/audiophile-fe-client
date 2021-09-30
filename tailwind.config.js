@@ -16,6 +16,10 @@ module.exports = {
         // HomePage
         previewSectionSmall:
           "url('/src/assets/home/desktop/image-speaker-zx7.jpg')",
+        previewSectionSmallTablet:
+          "url('/src/assets/home/tablet/image-speaker-zx7.jpg')",
+        previewSectionSmallMobile:
+          "url('/src/assets/home/mobile/image-speaker-zx7.jpg')",
         previewSectionDivided:
           "url('/src/assets/home/desktop/image-earphones-yx1.jpg')",
         previewSectionTablet:

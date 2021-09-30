@@ -1,32 +1,36 @@
 import BgImageSection from "../../assets/home/desktop/image-speaker-zx9.png";
 import EarphonesMobile from "../../assets/home/mobile/image-earphones-yx1.jpg";
-import BgImageSectionSmall from "../../assets/home/desktop/image-speaker-zx7.jpg";
 import PatternCircles from "../../assets/home/desktop/pattern-circles.svg";
 import { Button, SecondaryButton } from "../Elements/buttons";
 import { TextDisplay, TextH5, TextHeroBody } from "../Elements/typography";
 
 export const PreviewSection = () => {
   return (
-    <div className="hidden sm:flex container relative  mx-auto bg-primary rounded-md">
-      <div className="col-left w-1/2">
-        <div className="flex flex-col justify-center items-center overflow-y-hidden">
-          <img src={PatternCircles} className="absolute z-0 -top-8" />
-          <img src={BgImageSection} className="w-80 -mb-2 mt-28 z-10" />
+    <div className="mx-8 sm:mx-auto">
+      <div className="sm:mx-auto sm:flex container relative  mx-auto bg-primary rounded-md">
+        <div className="col-left lg:w-1/2">
+          <div className="flex flex-col justify-center items-center overflow-y-hidden">
+            <img src={PatternCircles} className="absolute lg:z-0 lg:-top-8" />
+            <img
+              src={BgImageSection}
+              className="w-40 sm:w-40 lg:w-80 -mb-2 mt-12 lg:mt-28 z-10"
+            />
+          </div>
         </div>
-      </div>
-      <div className="col-left w-1/2 flex flex-col justify-center pl-14">
-        <TextDisplay className="text-left">
-          ZX9
-          <br />
-          SPEAKER
-        </TextDisplay>
-        <TextHeroBody className="text-left">
-          Upgrade to premium speakers that are
-          <br />
-          phenomenally built to deliver truly remarkable sound.
-        </TextHeroBody>
-        <div className="mt-8">
-          <Button $alt>See product</Button>
+        <div className="col-left lg:w-1/2 flex flex-col justify-center lg:pl-14">
+          <TextDisplay className="text-center mt-16 lg:mt-0 lg:text-left">
+            ZX9
+            <br />
+            SPEAKER
+          </TextDisplay>
+          <TextHeroBody className="px-12 lg:px-0 text-center lg:text-left">
+            Upgrade to premium speakers that are
+            <br />
+            phenomenally built to deliver truly remarkable sound.
+          </TextHeroBody>
+          <div className="text-center lg:text-left mt-4 mb-8 lg:mb-0 lg:mt-8">
+            <Button $alt>See product</Button>
+          </div>
         </div>
       </div>
     </div>
@@ -35,11 +39,13 @@ export const PreviewSection = () => {
 
 export const PreviewSectionSmall = () => {
   return (
-    <div className="hidden sm:flex container relative my-8 bg-previewSectionSmall bg-no-repeat bg-bottom bg-cover mx-auto rounded-md">
-      <div className="flex flex-col justify-center px-24 py-24">
-        <TextH5>ZX7 SPEAKER</TextH5>
-        <div>
-          <SecondaryButton>See product</SecondaryButton>
+    <div className="mx-8 sm:mx-auto">
+      <div className="mx-auto flex container relative my-8 bg-previewSectionSmallMobile sm:bg-previewSectionSmallTablet lg:bg-previewSectionSmall bg-no-repeat bg-bottom bg-cover rounded-md">
+        <div className="flex flex-col justify-center px-12 py-24  sm:px-12 sm:py-24 lg:px-24 lg:py-24">
+          <TextH5>ZX7 SPEAKER</TextH5>
+          <div>
+            <SecondaryButton>See product</SecondaryButton>
+          </div>
         </div>
       </div>
     </div>
