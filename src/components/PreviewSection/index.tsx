@@ -1,4 +1,5 @@
 import BgImageSection from "../../assets/home/desktop/image-speaker-zx9.png";
+import EarphonesMobile from "../../assets/home/mobile/image-earphones-yx1.jpg";
 import BgImageSectionSmall from "../../assets/home/desktop/image-speaker-zx7.jpg";
 import PatternCircles from "../../assets/home/desktop/pattern-circles.svg";
 import { Button, SecondaryButton } from "../Elements/buttons";
@@ -6,7 +7,7 @@ import { TextDisplay, TextH5, TextHeroBody } from "../Elements/typography";
 
 export const PreviewSection = () => {
   return (
-    <div className="container relative flex mx-auto bg-primary rounded-md">
+    <div className="hidden sm:flex container relative  mx-auto bg-primary rounded-md">
       <div className="col-left w-1/2">
         <div className="flex flex-col justify-center items-center overflow-y-hidden">
           <img src={PatternCircles} className="absolute z-0 -top-8" />
@@ -34,7 +35,7 @@ export const PreviewSection = () => {
 
 export const PreviewSectionSmall = () => {
   return (
-    <div className="container relative my-8 flex bg-previewSectionSmall bg-no-repeat bg-bottom bg-cover mx-auto rounded-md">
+    <div className="hidden sm:flex container relative my-8 bg-previewSectionSmall bg-no-repeat bg-bottom bg-cover mx-auto rounded-md">
       <div className="flex flex-col justify-center px-24 py-24">
         <TextH5>ZX7 SPEAKER</TextH5>
         <div>
@@ -47,10 +48,11 @@ export const PreviewSectionSmall = () => {
 
 export const PreviewSectionDivided = () => {
   return (
-    <div className="container relative my-8 gap-8 bg-cover mx-auto grid grid-flow-row grid-cols-2">
-      <div className="bg-previewSectionDivided h-full rounded-md"></div>
-      <div className="bg-secondaryLight rounded-md flex flex-col justify-center py-20 px-24">
-        <TextH5>ZX7 SPEAKER</TextH5>
+    <div className="container relative my-8 gap-8 bg-cover mx-auto flex  flex-col sm:grid sm:grid-flow-row sm:grid-cols-2">
+      <div className="mx-8 sm:mx-0 hidden sm:block bg-previewSectionTablet bg-cover lg:bg-previewSectionDivided h-full rounded-md"></div>
+      <img src={EarphonesMobile} className="rounded-md mx-8 sm:hidden" />
+      <div className="mx-8 sm:mx-0 bg-secondaryLight rounded-md flex flex-col justify-center py-8 px-8 sm:py-16 sm:px-12 lg:py-20 lg:px-24">
+        <TextH5>YX1 EARPHONES</TextH5>
         <div>
           <SecondaryButton>See product</SecondaryButton>
         </div>

@@ -18,6 +18,8 @@ module.exports = {
           "url('/src/assets/home/desktop/image-speaker-zx7.jpg')",
         previewSectionDivided:
           "url('/src/assets/home/desktop/image-earphones-yx1.jpg')",
+        previewSectionTablet:
+          "url('/src/assets/home/tablet/image-earphones-yx1.jpg')",
       },
       width: {
         "1/7": "14.2857143%",
