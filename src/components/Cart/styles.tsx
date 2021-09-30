@@ -12,5 +12,5 @@ type CartBgOverlayProps = {
   $isActive: boolean;
 };
 export const CartBgOverlay = tw.div<CartBgOverlayProps>`
-  ${({ $isActive = false }) => ($isActive ? "hidden" : "")}
+  ${({ $isActive = false }) => ($isActive ? "" : "hidden")}
   cart-bg fixed top-0 left-0 right-0 bottom-0 bg-black opacity-70 z-10`;

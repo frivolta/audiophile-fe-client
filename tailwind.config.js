@@ -67,6 +67,13 @@ module.exports = {
             letterSpacing: "0.06rem",
           },
         ],
+        h6: [
+          "1.125rem",
+          {
+            letterSpacing: "0.08125rem",
+            lineHeight: "1.5rem",
+          },
+        ],
       },
     },
   },

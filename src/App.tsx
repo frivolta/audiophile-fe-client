@@ -9,6 +9,12 @@ import { Header } from "./components/Header";
 import React from "react";
 import { CartBgOverlay } from "./components/Cart/styles";
 
+import CatHeadphonesImg from "./assets/shared/desktop/image-category-thumbnail-headphones.png";
+import CatSpeakersImg from "./assets/shared/desktop/image-category-thumbnail-speakers.png";
+import CatEarphonesImg from "./assets/shared/desktop/image-category-thumbnail-earphones.png";
+import { CategoryItem } from "./components/CategoriesList";
+import { CategoriesWrapper } from "./components/CategoriesList/style";
+
 function App() {
   return (
     <React.Fragment>
@@ -26,6 +32,25 @@ function App() {
 
         <Button>Subscribe</Button>
       </Hero>
+      <CategoriesWrapper>
+        <CategoryItem
+          title="Headphones"
+          linkPath="/category/headphones"
+          thumbnail={CatHeadphonesImg}
+        />
+        <CategoryItem
+          title="Speakers"
+          linkPath="/category/speakers"
+          thumbnail={CatSpeakersImg}
+          marginAdjustment={1.5}
+        />
+        <CategoryItem
+          title="Earphones"
+          linkPath="/category/earphones"
+          thumbnail={CatEarphonesImg}
+          marginAdjustment={4}
+        />
+      </CategoriesWrapper>
     </React.Fragment>
   );
 }

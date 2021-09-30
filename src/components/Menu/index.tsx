@@ -1,6 +1,6 @@
 import IconClose from "../../assets/shared/tablet/icon-close.svg";
 
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { PATHS } from "../../config/routes";
 import {
   MenuNavigationListContainerDesktop,
@@ -35,7 +35,7 @@ export const MobileMenu: React.FC = () => {
   return (
     <MobileMenuContainer $isHidden={!isMobileOpen}>
       <MobileMenuCloseContainer onClick={triggerMobileMenu}>
-        <img src={IconClose} />
+        <img src={IconClose} alt="Audiophile close menu" />
       </MobileMenuCloseContainer>
       <MobileMenuNavigationList>
         {PATHS.map((link) => (

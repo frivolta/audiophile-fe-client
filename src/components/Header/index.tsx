@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
           <HeaderGridContainer>
             <HeaderColLeft>
               <HamburgerWrapper onClick={triggerMobileMenu}>
-                <img src={IconHamburger} />
+                <img src={IconHamburger} alt="Audiophile menu" />
               </HamburgerWrapper>
               <img
                 src={LogoDesktop}
