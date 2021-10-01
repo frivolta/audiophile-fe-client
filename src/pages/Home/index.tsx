@@ -1,7 +1,7 @@
 import { CartBgOverlay } from "../../components/Cart/styles";
 import { CategoryItem } from "../../components/CategoriesList";
 import { CategoriesWrapper } from "../../components/CategoriesList/style";
-import { Button } from "../../components/Elements/buttons";
+import { Button } from "../../components/Button";
 import {
   TextDisplay,
   TextHeroBody,

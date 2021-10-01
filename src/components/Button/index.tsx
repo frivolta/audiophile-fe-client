@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import { TextSubtitle } from "./typography";
+import { TextSubtitle } from "../Elements/typography";
 import IconArrowRight from "../../assets/shared/desktop/icon-arrow-right.svg";
 
 type ButtonProps = {

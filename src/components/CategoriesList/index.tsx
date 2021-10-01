@@ -1,4 +1,4 @@
-import { InlineButton } from "../Elements/buttons";
+import { InlineButton } from "../Button";
 import { TextH6 } from "../Elements/typography";
 import {
   CategoryItemContainer,

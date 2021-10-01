@@ -1,10 +1,7 @@
 import BgImageSection from "../../../../assets/home/desktop/image-speaker-zx9.png";
 import EarphonesMobile from "../../../../assets/home/mobile/image-earphones-yx1.jpg";
 import PatternCircles from "../../../../assets/home/desktop/pattern-circles.svg";
-import {
-  Button,
-  SecondaryButton,
-} from "../../../../components/Elements/buttons";
+import { Button, SecondaryButton } from "../../../../components/Button";
 import {
   TextDisplay,
   TextH5,
