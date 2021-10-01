@@ -1,8 +1,15 @@
-import BgImageSection from "../../assets/home/desktop/image-speaker-zx9.png";
-import EarphonesMobile from "../../assets/home/mobile/image-earphones-yx1.jpg";
-import PatternCircles from "../../assets/home/desktop/pattern-circles.svg";
-import { Button, SecondaryButton } from "../Elements/buttons";
-import { TextDisplay, TextH5, TextHeroBody } from "../Elements/typography";
+import BgImageSection from "../../../../assets/home/desktop/image-speaker-zx9.png";
+import EarphonesMobile from "../../../../assets/home/mobile/image-earphones-yx1.jpg";
+import PatternCircles from "../../../../assets/home/desktop/pattern-circles.svg";
+import {
+  Button,
+  SecondaryButton,
+} from "../../../../components/Elements/buttons";
+import {
+  TextDisplay,
+  TextH5,
+  TextHeroBody,
+} from "../../../../components/Elements/typography";
 
 export const PreviewSection = () => {
   return (
@@ -10,10 +17,15 @@ export const PreviewSection = () => {
       <div className="sm:mx-auto sm:flex container relative  mx-auto bg-primary rounded-md">
         <div className="col-left lg:w-1/2">
           <div className="flex flex-col justify-center items-center overflow-y-hidden">
-            <img src={PatternCircles} className="absolute lg:z-0 lg:-top-8" />
+            <img
+              src={PatternCircles}
+              className="absolute lg:z-0 lg:-top-8"
+              alt="pattern"
+            />
             <img
               src={BgImageSection}
               className="w-40 sm:w-40 lg:w-80 -mb-2 mt-12 lg:mt-28 z-10"
+              alt="zx9 speaker"
             />
           </div>
         </div>
@@ -56,7 +68,11 @@ export const PreviewSectionDivided = () => {
   return (
     <div className="container relative my-8 gap-8 bg-cover mx-auto flex  flex-col sm:grid sm:grid-flow-row sm:grid-cols-2">
       <div className="mx-8 sm:mx-0 hidden sm:block bg-previewSectionTablet bg-cover lg:bg-previewSectionDivided h-full rounded-md"></div>
-      <img src={EarphonesMobile} className="rounded-md mx-8 sm:hidden" />
+      <img
+        src={EarphonesMobile}
+        className="rounded-md mx-8 sm:hidden"
+        alt="earphones"
+      />
       <div className="mx-8 sm:mx-0 bg-secondaryLight rounded-md flex flex-col justify-center py-8 px-8 sm:py-16 sm:px-12 lg:py-20 lg:px-24">
         <TextH5>YX1 EARPHONES</TextH5>
         <div>
