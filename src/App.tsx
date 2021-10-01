@@ -20,6 +20,7 @@ import {
   PreviewSectionSmall,
 } from "./components/PreviewSection";
 import { ExcerptBestGear } from "./components/ExcerptBestGear";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
       <PreviewSectionSmall />
       <PreviewSectionDivided />
       <ExcerptBestGear />
+      <Footer />
     </React.Fragment>
   );
 }

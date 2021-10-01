@@ -12,7 +12,7 @@ export const TextH6 = tw.h6`text-h6 uppercase font-bold `;
 export const TextH5 = tw.h5`text-h5 uppercase font-bold `;
 export const TextH4 = tw.h4`text-h4 uppercase font-bold `;
 export const TextH2 = tw.h2`text-h2 uppercase font-bold`;
-export const TextBody = tw.p`text-p font-extralight opacity-50`;
+export const TextBody = tw.p`text-body font-extralight opacity-50`;
 
 // Hero
 export const TextHeroBody = tw.p`text-white text-heroBody font-extralight opacity-75`;

@@ -108,7 +108,7 @@ module.exports = {
           },
         ],
         p: [
-          "1,0666rem",
+          "0,9375rem",
           {
             lineHeight: "1,5625rem",
           },
@@ -117,7 +117,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      padding: ["first, last"],
+    },
   },
   plugins: [
     function ({ addComponents }) {

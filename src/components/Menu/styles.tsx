@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 
-export const MenuNavigationListContainerDesktop = tw.ul`inline-flex text-white uppercase text-subtitle font-bold`;
-export const MenuNavigationListItemDesktop = tw.li`px-4`;
+export const MenuNavigationListContainerDesktop = tw.ul`flex-col sm:flex-row sm:inline-flex text-white uppercase text-subtitle font-bold`;
+export const MenuNavigationListItemDesktop = tw.li`mt-4 sm:mt-0 sm:first:pl-0 sm:last:pr-0 px-4`;
 
 type MobileMenuContainerProps = {
   $isHidden: boolean;
