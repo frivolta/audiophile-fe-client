@@ -1,12 +1,12 @@
 import React from "react";
 import { HeroCol, HeroText, HeroWrapper } from "./styles";
 
-interface Props {
+export interface HeroProps {
   children: React.ReactChild | React.ReactChild[];
   header?: React.FC<{}>;
 }
 
-export const Hero: React.FC<Props> = ({ children, header }) => {
+export const Hero: React.FC<HeroProps> = ({ children, header }) => {
   return (
     <HeroWrapper>
       {header && React.createElement(header)}

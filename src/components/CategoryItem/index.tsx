@@ -6,7 +6,7 @@ import {
   CategoryItemWrapper,
 } from "./style";
 
-interface CategoryItemProps {
+export interface CategoryItemProps {
   thumbnail: string;
   title: string;
   linkPath: string;
