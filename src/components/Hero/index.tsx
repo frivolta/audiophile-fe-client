@@ -8,7 +8,7 @@ export interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ children, header }) => {
   return (
-    <HeroWrapper>
+    <HeroWrapper data-testid="hero">
       {header && React.createElement(header)}
       <HeroText>
         <HeroCol>{children}</HeroCol>

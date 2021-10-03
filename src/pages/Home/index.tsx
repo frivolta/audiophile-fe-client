@@ -24,7 +24,7 @@ import CatEarphonesImg from "../../assets/shared/desktop/image-category-thumbnai
 export const Home = () => {
   return (
     <>
-      <CartBgOverlay $isActive={false} />
+      <CartBgOverlay $isActive={false} data-testid="cart-bg-overlay" />
       <Hero header={Header}>
         <TextOverline $alt>New Product</TextOverline>
         <TextDisplay>XX99 Mark II Headphones</TextDisplay>
@@ -36,9 +36,13 @@ export const Home = () => {
           enthusiast.
         </TextHeroBody>
 
-        <Button text="SUBSCRIBE" onClick={() => console.log("void")} />
+        <Button
+          text="SUBSCRIBE"
+          data-testid="subscribe-btn"
+          onClick={() => console.log("void")}
+        />
       </Hero>
-      <CategoriesWrapper>
+      <CategoriesWrapper data-testid="categories">
         <CategoryItem
           title="Headphones"
           linkPath="/category/headphones"

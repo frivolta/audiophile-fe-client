@@ -9,7 +9,10 @@ const ColouredLineMobile = tw.div`colored-line flex sm:hidden mx-auto w-24 h-1 b
 
 export const Footer = () => {
   return (
-    <div className="bg-secondary text-white px-8 sm:px-0 text-center sm:text-left">
+    <div
+      className="bg-secondary text-white px-8 sm:px-0 text-center sm:text-left"
+      data-testid="footer"
+    >
       <div className="relative container mx-auto">
         <ColouredLineDesktop />
         <ColouredLineMobile />

@@ -10,7 +10,7 @@ import {
 
 export const PreviewSection = () => {
   return (
-    <div className="mx-8 sm:mx-auto">
+    <div className="mx-8 sm:mx-auto" data-testid="preview-section">
       <div className="sm:mx-auto sm:flex container relative  mx-auto bg-primary rounded-md">
         <div className="col-left lg:w-1/2">
           <div className="flex flex-col justify-center items-center overflow-y-hidden">
@@ -52,7 +52,7 @@ export const PreviewSection = () => {
 
 export const PreviewSectionSmall = () => {
   return (
-    <div className="mx-8 sm:mx-auto">
+    <div className="mx-8 sm:mx-auto" data-testid="preview-section-small">
       <div className="mx-auto flex container relative my-8 bg-previewSectionSmallMobile sm:bg-previewSectionSmallTablet lg:bg-previewSectionSmall bg-no-repeat bg-bottom bg-cover rounded-md">
         <div className="flex flex-col justify-center px-12 py-24  sm:px-12 sm:py-24 lg:px-24 lg:py-24">
           <TextH5>ZX7 SPEAKER</TextH5>
@@ -71,7 +71,10 @@ export const PreviewSectionSmall = () => {
 
 export const PreviewSectionDivided = () => {
   return (
-    <div className="container relative my-8 gap-8 bg-cover mx-auto flex  flex-col sm:grid sm:grid-flow-row sm:grid-cols-2">
+    <div
+      className="container relative my-8 gap-8 bg-cover mx-auto flex  flex-col sm:grid sm:grid-flow-row sm:grid-cols-2"
+      data-testid="preview-section-divided"
+    >
       <div className="mx-8 sm:mx-0 hidden sm:block bg-previewSectionTablet bg-cover lg:bg-previewSectionDivided h-full rounded-md"></div>
       <img
         src={EarphonesMobile}

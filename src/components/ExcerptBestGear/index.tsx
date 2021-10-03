@@ -5,7 +5,10 @@ import { TextBody, TextH2 } from "../Elements/typography";
 
 export const ExcerptBestGear = () => {
   return (
-    <div className="px-8 overflow-hidden sm:px-0 pexcerpt flex flex-col-reverse lg:flex-row container mx-auto my-24 lg:my-48">
+    <div
+      className="px-8 overflow-hidden sm:px-0 pexcerpt flex flex-col-reverse lg:flex-row container mx-auto my-24 lg:my-48"
+      data-testid="excerpt-best-gear"
+    >
       <div className="excerpt__text w-full lg:w-1/2 overflow-hidden text-center lg:text-left flex flex-col justify-center pr-0 lg:pr-20">
         <TextH2>
           Bringing you the <span className="text-primary">best</span> audio gear

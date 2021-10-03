@@ -17,7 +17,7 @@ export const DesktopMenu: React.FC = () => {
   return (
     <MenuNavigationListContainerDesktop>
       {PATHS.map((link) => (
-        <MenuNavigationListItemDesktop>
+        <MenuNavigationListItemDesktop key={link.path}>
           <MenuNavigationListLink href={link.path} aria-label={link.label}>
             {link.label}
           </MenuNavigationListLink>
@@ -39,7 +39,7 @@ export const MobileMenu: React.FC = () => {
       </MobileMenuCloseContainer>
       <MobileMenuNavigationList>
         {PATHS.map((link) => (
-          <MenuNavigationListItemMobile>
+          <MenuNavigationListItemMobile key={link.path}>
             <MenuNavigationListLink
               $isMobile
               href={link.path}
