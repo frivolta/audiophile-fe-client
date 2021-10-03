@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 
 // Cart items
-export const CartWrapper = tw.div`cart relative`;
+export const CartWrapper = tw.div`cart relative cursor-pointer`;
 export const CartIcon = tw.img``;
 
 // Cart Bucket

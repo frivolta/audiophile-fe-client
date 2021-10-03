@@ -1,7 +1,7 @@
 import BgImageSection from "../../../../assets/home/desktop/image-speaker-zx9.png";
 import EarphonesMobile from "../../../../assets/home/mobile/image-earphones-yx1.jpg";
 import PatternCircles from "../../../../assets/home/desktop/pattern-circles.svg";
-import { Button, SecondaryButton } from "../../../../components/Button";
+import { Button, ButtonType } from "../../../../components/Button";
 import {
   TextDisplay,
   TextH5,
@@ -38,7 +38,11 @@ export const PreviewSection = () => {
             phenomenally built to deliver truly remarkable sound.
           </TextHeroBody>
           <div className="text-center lg:text-left mt-4 mb-8 lg:mb-0 lg:mt-8">
-            <Button $alt>See product</Button>
+            <Button
+              buttonType={ButtonType.alt}
+              text="See product"
+              onClick={() => console.log("void")}
+            />
           </div>
         </div>
       </div>
@@ -53,7 +57,11 @@ export const PreviewSectionSmall = () => {
         <div className="flex flex-col justify-center px-12 py-24  sm:px-12 sm:py-24 lg:px-24 lg:py-24">
           <TextH5>ZX7 SPEAKER</TextH5>
           <div>
-            <SecondaryButton>See product</SecondaryButton>
+            <Button
+              buttonType={ButtonType.altOutline}
+              text="See product"
+              onClick={() => console.log("void")}
+            />
           </div>
         </div>
       </div>
@@ -73,7 +81,11 @@ export const PreviewSectionDivided = () => {
       <div className="mx-8 sm:mx-0 bg-secondaryLight rounded-md flex flex-col justify-center py-8 px-8 sm:py-16 sm:px-12 lg:py-20 lg:px-24">
         <TextH5>YX1 EARPHONES</TextH5>
         <div>
-          <SecondaryButton>See product</SecondaryButton>
+          <Button
+            buttonType={ButtonType.altOutline}
+            text="See product"
+            onClick={() => console.log("void")}
+          />
         </div>
       </div>
     </div>

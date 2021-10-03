@@ -1,4 +1,4 @@
-import { InlineButton } from "../Button";
+import { Button, ButtonType } from "../Button";
 import { TextH6 } from "../Elements/typography";
 import {
   CategoryItemContainer,
@@ -31,7 +31,11 @@ export const CategoryItem: React.FC<CategoryItemProps> = ({
           className={`${marginAdjustment ? `m-${marginAdjustment}` : ""}`}
         />
         <TextH6 className="-mt-6">{title}</TextH6>
-        <InlineButton handleClick={handleClickAction} text="SHOP" />
+        <Button
+          onClick={handleClickAction}
+          text="SHOP"
+          buttonType={ButtonType.inline}
+        />
       </CategoryItemContainer>
     </CategoryItemWrapper>
   );

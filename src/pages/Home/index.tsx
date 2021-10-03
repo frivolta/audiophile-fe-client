@@ -1,6 +1,6 @@
 import { CartBgOverlay } from "../../components/Cart/styles";
-import { CategoryItem } from "../../components/CategoriesList";
-import { CategoriesWrapper } from "../../components/CategoriesList/style";
+import { CategoryItem } from "../../components/CategoryItem";
+import { CategoriesWrapper } from "../../components/CategoryItem/style";
 import { Button } from "../../components/Button";
 import {
   TextDisplay,
@@ -36,7 +36,7 @@ export const Home = () => {
           enthusiast.
         </TextHeroBody>
 
-        <Button>Subscribe</Button>
+        <Button text="SUBSCRIBE" onClick={() => console.log("void")} />
       </Hero>
       <CategoriesWrapper>
         <CategoryItem

@@ -58,14 +58,15 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
-    "@storybook/addon-links": "^6.3.8",
+    "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-essentials": "^6.3.9",
+    "@storybook/addon-links": "^6.3.9",
     "@storybook/node-logger": "^6.3.8",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.8",
     "autoprefixer": "^9.8.7",
     "postcss": "^7.0.38",
+    "storybook-addon-pseudo-states": "^1.0.0",
     "tailwind-styled-components": "^2.0.3",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
   }
