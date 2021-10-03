@@ -1,8 +1,9 @@
 import { Story, Meta } from "@storybook/react";
-import { Header } from ".";
+
+import { Header, HeaderProps } from ".";
 
 export default {
-  title: "Section/Header",
+  title: "Components/Header",
   component: Header,
   argTypes: {
     linkPath: { action: "clicked" },
@@ -12,6 +13,7 @@ export default {
   },
 } as Meta;
 
-const HeaderTemplate: Story = () => <Header />;
+const HeaderTemplate: Story<HeaderProps> = (args) => <Header {...args} />;
 
 export const HeaderComponent = HeaderTemplate.bind({});
+HeaderComponent.args = {};

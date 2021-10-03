@@ -14,7 +14,7 @@ import { DesktopMenu, MobileMenu } from "../Menu";
 import { Cart } from "../Cart";
 
 // Mobile Context to open/close mobile menu
-interface MobileMenuState {
+export interface MobileMenuState {
   isMobileOpen: boolean;
   triggerMobileMenu: () => void;
 }
@@ -28,8 +28,14 @@ export const MobileMenuContext = React.createContext<MobileMenuState>(
   initialMobileMenuState
 );
 
-export const Header: React.FC = () => {
-  const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+export interface HeaderProps {
+  mobileInitialState?: boolean;
+}
+
+export const Header: React.FC<HeaderProps> = ({ mobileInitialState }) => {
+  const [isMobileOpen, setIsMobileOpen] = React.useState(
+    mobileInitialState || false
+  );
 
   const triggerMobileMenu = React.useCallback(() => {
     setIsMobileOpen(!isMobileOpen);
