@@ -1,38 +1,57 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Category, getCategory } from "../../api/categories";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useParams, useHistory } from "react-router-dom";
 import { getProductByCategory } from "../../api/products";
 import { Product } from "../../api/types/products";
+import { CategoryList } from "../../components/CategoryList";
+import { ExcerptBestGear } from "../../components/ExcerptBestGear";
+import { Footer } from "../../components/Footer";
+import { CategoryHeader } from "./components/CategoryHeader";
+import { ProductItem } from "./components/Product";
 
 interface Params {
   id: string;
 }
 
 export const CategoryPage = () => {
-  const [categories, setCategories] = useState<Category[]>([]);
+  const isCancelled = useRef(false);
+  const history = useHistory();
   const [products, setProducts] = useState<Product[]>([]);
   const { id } = useParams<Params>();
 
-  useEffect(() => {
-    const fetchApi = async function () {
-      const categories = await getCategory(
-        "http://localhost:4000/categories",
-        id
-      );
-      const products = await getProductByCategory(
-        "http://localhost:4000/products",
-        id
-      );
-      if (categories) {
-        setCategories(categories);
-      }
-      if (products) {
-        setProducts(products);
-      }
-    };
-    fetchApi();
+  const fetchApi = useCallback(async () => {
+    const products = await getProductByCategory(
+      "http://localhost:4000/products",
+      id
+    );
+    if (products && !isCancelled.current) {
+      setProducts(products);
+    }
   }, []);
-
-  console.log(categories, products);
-  return <div className=""></div>;
+  useEffect(() => {
+    fetchApi();
+    return () => {
+      isCancelled.current = true;
+    };
+  }, []);
+  const isEven = (index: number) => !!(index % 2);
+  const handleRedirect = (path: string) => history.push(path);
+  return (
+    <div>
+      <CategoryHeader title={id} />
+      <div className="body py-16 px-8 sm:px-0 container mx-auto">
+        {products &&
+          products.map((product, i) => (
+            <ProductItem
+              key={product.id}
+              isEven={isEven(i)}
+              product={product}
+              handleRedirect={handleRedirect}
+            />
+          ))}
+        <CategoryList />
+        <ExcerptBestGear />
+      </div>
+      <Footer />
+    </div>
+  );
 };

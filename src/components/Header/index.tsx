@@ -30,9 +30,13 @@ export const MobileMenuContext = React.createContext<MobileMenuState>(
 
 export interface HeaderProps {
   mobileInitialState?: boolean;
+  fixed?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ mobileInitialState }) => {
+export const Header: React.FC<HeaderProps> = ({
+  mobileInitialState,
+  fixed,
+}) => {
   const [isMobileOpen, setIsMobileOpen] = React.useState(
     mobileInitialState || false
   );
@@ -44,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ mobileInitialState }) => {
   return (
     <MobileMenuContext.Provider value={{ isMobileOpen, triggerMobileMenu }}>
       <React.Fragment>
-        <HeaderWrapper className="z-40">
+        <HeaderWrapper className="z-40" $fixed={fixed}>
           <HeaderGridContainer>
             <HeaderColLeft>
               <HamburgerWrapper onClick={triggerMobileMenu}>
