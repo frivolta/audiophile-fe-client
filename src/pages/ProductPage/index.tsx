@@ -1,5 +1,5 @@
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getProductBySlug } from "../../api/products";
 import { Product } from "../../api/types/products";
 import { CategoryList } from "../../components/CategoryList";
@@ -7,8 +7,8 @@ import { ExcerptBestGear } from "../../components/ExcerptBestGear";
 import { Footer } from "../../components/Footer";
 import { Link } from "react-router-dom";
 import { ProductItem } from "./components/ProductItem";
-import { CartContext } from "../../hooks/useCart/useCart";
 import { ProductHeader } from "./components/ProductHeader";
+import { ProducDescription } from "./components/ProductDescription";
 
 interface Params {
   slug: string;
@@ -45,6 +45,7 @@ export const ProductPage = () => {
         {product && (
           <div>
             <ProductItem product={product} />
+            <ProducDescription product={product} />
           </div>
         )}
         <CategoryList />

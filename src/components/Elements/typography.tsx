@@ -10,6 +10,7 @@ export const TextOverline = tw.div<TextOverlineProps>`
 export const TextDisplay = tw.h1`my-4 text-display text-white font-bold uppercase`;
 export const TextH6 = tw.h6`text-h6 uppercase font-bold `;
 export const TextH5 = tw.h5`text-h5 uppercase font-bold `;
+export const TextH3 = tw.h3`text-h3 uppercase font-bold `;
 export const TextH4 = tw.h4`text-h4 uppercase font-bold `;
 export const TextH2 = tw.h2`text-h2 uppercase font-bold`;
 export const TextBody = tw.p`text-body font-extralight opacity-50`;
