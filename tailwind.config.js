@@ -108,7 +108,13 @@ module.exports = {
           },
         ],
         p: [
-          "0,9375rem",
+          "0.9375rem",
+          {
+            lineHeight: "1,5625rem",
+          },
+        ],
+        small: [
+          "0.875rem",
           {
             lineHeight: "1,5625rem",
           },

@@ -7,7 +7,7 @@ import {
   TextOverline,
 } from "../../../components/Elements/typography";
 import { QuantityForm } from "../../../components/QuantityForm";
-import { CartContext } from "../../../hooks/useCart";
+import { CartContext } from "../../../hooks/useCart/useCart";
 import { formatPrice } from "../../../utils";
 
 export interface ProductProps {

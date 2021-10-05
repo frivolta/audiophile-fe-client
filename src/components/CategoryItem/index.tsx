@@ -1,3 +1,4 @@
+import { useHistory } from "react-router";
 import { Button, ButtonType } from "../Button";
 import { TextH6 } from "../Elements/typography";
 import {
@@ -18,8 +19,9 @@ export const CategoryItem: React.FC<CategoryItemProps> = ({
   linkPath,
   marginAdjustment,
 }) => {
+  const history = useHistory();
   const handleClickAction = () => {
-    console.log(`going to: ${linkPath}`);
+    history.push(linkPath);
   };
 
   return (

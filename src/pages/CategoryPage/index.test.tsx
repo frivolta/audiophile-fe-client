@@ -1,8 +1,7 @@
 import { render, within, screen, waitFor } from "@testing-library/react";
 import { CategoryPage } from ".";
 import { MemoryRouter } from "react-router-dom";
-import { GetProductsApi } from "../../api/products";
-import { product } from "./db.product";
+import { product } from "../../db.product";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),

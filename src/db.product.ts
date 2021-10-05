@@ -1,4 +1,4 @@
-import { Product } from "../../api/types/products";
+import { Product } from "./api/types/products";
 
 export const product: Product = {
   id: 1,

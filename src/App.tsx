@@ -2,7 +2,7 @@ import { Home } from "./pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CategoryPage } from "./pages/CategoryPage";
 import { ProductPage } from "./pages/ProductPage";
-import { CartContextProvider } from "./hooks/useCart";
+import { CartContextProvider } from "./hooks/useCart/useCart";
 function App() {
   return (
     <CartContextProvider>

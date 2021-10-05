@@ -7,7 +7,8 @@ import { ExcerptBestGear } from "../../components/ExcerptBestGear";
 import { Footer } from "../../components/Footer";
 import { Link } from "react-router-dom";
 import { ProductItem } from "./components/ProductItem";
-import { CartContext } from "../../hooks/useCart";
+import { CartContext } from "../../hooks/useCart/useCart";
+import { ProductHeader } from "./components/ProductHeader";
 
 interface Params {
   slug: string;
@@ -16,7 +17,6 @@ interface Params {
 export const ProductPage = () => {
   const isCancelled = useRef(false);
   const [product, setProduct] = useState<Product>();
-  const history = useHistory();
   const { slug } = useParams<Params>();
 
   const fetchApi = useCallback(async () => {
@@ -37,6 +37,7 @@ export const ProductPage = () => {
 
   return (
     <div>
+      <ProductHeader />
       <div className="body py-16 px-8 sm:px-0 container mx-auto">
         <Link to="/" className="text-secondary">
           Go back

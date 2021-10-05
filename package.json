@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
+    "@react-mock/localstorage": "^0.1.2",
     "@storybook/addon-contexts": "^5.3.21",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -73,6 +74,7 @@
     "@storybook/node-logger": "^6.3.8",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.8",
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/axios-mock-adapter": "^1.10.0",
     "autoprefixer": "^9.8.7",
     "postcss": "^7.0.38",
