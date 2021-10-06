@@ -5,14 +5,14 @@ export const PATHS = [
   },
   {
     label: "Headphones",
-    path: "/headphones",
+    path: "/category/headphones",
   },
   {
     label: "Speakers",
-    path: "/speakers",
+    path: "/category/speakers",
   },
   {
     label: "Earphones",
-    path: "/earphones",
+    path: "/category/earphones",
   },
 ];

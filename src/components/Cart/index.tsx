@@ -18,7 +18,7 @@ import {
 
 export const Cart = () => {
   const history = useHistory();
-  const [showCart, setShowCart] = useState<boolean>(true);
+  const [showCart, setShowCart] = useState<boolean>(false);
   const { products, setProducts: setProductToCart, total } = useContext(
     CartContext
   );
